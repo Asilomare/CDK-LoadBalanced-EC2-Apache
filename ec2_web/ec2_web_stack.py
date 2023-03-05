@@ -23,7 +23,6 @@ class Ec2WebStack(cdk.Stack):
 
         multipart_user_data.add_commands("sudo yum update -y")
         multipart_user_data.add_commands("sudo amazon-linux-extras install php8.0 mariadb10.5")
-        multipart_user_data.add_commands("cat /etc/system-release")
         multipart_user_data.add_commands("sudo yum install -y httpd")
         multipart_user_data.add_commands("sudo service httpd start")
 
