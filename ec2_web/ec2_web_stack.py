@@ -35,9 +35,10 @@ class Ec2WebStack(cdk.Stack):
             machine_image=ec2.AmazonLinuxImage(),
             key_name=prod_key,
             instance_type=ec2.InstanceType(instance_type_identifier="t2.nano"),
+            min_capacity=2
         )
 
-        #
+        # ApplicationTargetGroup needed to connect ASG and ALBV2
         application_target_group = elbv2.ApplicationTargetGroup(self, "TG1",
             target_type=elbv2.TargetType.INSTANCE,
             port=80,
