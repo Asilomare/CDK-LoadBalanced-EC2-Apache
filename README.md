@@ -1,2 +1,3 @@
 # CDK-LoadBalanced-EC2-Apache
 This CDK (AWS Cloud Development Kit) code defines an AWS infrastructure that includes an EC2 Auto Scaling group, an Application Load Balancer, and an Application Target Group. The EC2 instances in the Auto Scaling group are launched with user data that installs Apache, PHP, and MariaDB on an Amazon Linux AMI. The Application Load Balancer forwards incoming traffic to the EC2 instances in the Application Target Group. The purpose of this infrastructure is to provide a scalable and highly available web application hosting environment on AWS.
+![](https://github.com/Asilomare/CDK-LoadBalanced-EC2-Apache/blob/main/images/lbdiagram.png?raw=true)
